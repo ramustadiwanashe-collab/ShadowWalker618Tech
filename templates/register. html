@@ -1,1 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
 
+<div class="center">
+    <h1>Create Account</h1>
+
+    <form method="POST" class="form-box">
+        <input type="text" name="username" placeholder="Choose Username" required>
+        <br><br>
+        <input type="password" name="password" placeholder="Choose Password" required>
+        <br><br>
+        <button type="submit" class="btn">Register</button>
+    </form>
+
+    <p>Already have an account?</p>
+    <a href="/login" class="link-btn">Login Here</a>
+</div>
+
+{% endblock %}
