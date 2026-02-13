@@ -1,1 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
 
+<div class="center">
+    <h1>Welcome {{ username }} 🔥</h1>
+
+    <div class="features">
+        <div>📘 Ethical Hacking Lab</div>
+        <div>💻 Software Master</div>
+        <div>🚀 Deployment Hub</div>
+        <div>⚙ Configuration Hub</div>
+    </div>
+
+    <form method="POST">
+        <textarea name="note" placeholder="Write advanced notes..." required></textarea>
+        <br>
+        <button type="submit">Add Note</button>
+    </form>
+
+    {% for note in notes %}
+        <div class="note">
+            {{ note.content }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
